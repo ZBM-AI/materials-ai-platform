@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# 虚拟环境
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 数据文件 (太大, 不提交)
+data/faiss_index/*
+data/ner_training/*
+data/chroma_db/*
+data/downloaded_papers/*
+data/parsed/*
+data/reports/*
+data/textbooks/*
+data/generated_structures/*
+data/shap_output/*
+data/diagnostics/*
+data/matbench_cache/*
+data/users.db
+materials_ai/data/faiss_index/*
+materials_ai/data/ner_training/*
+materials_ai/data/chroma_db/*
+materials_ai/data/downloaded_papers/*
+materials_ai/data/parsed/*
+materials_ai/data/reports/*
+materials_ai/data/textbooks/*
+materials_ai/data/generated_structures/*
+materials_ai/data/shap_output/*
+materials_ai/data/diagnostics/*
+materials_ai/data/matbench_cache/*
+materials_ai/data/users.db
+!data/faiss_index/.gitkeep
+!data/ner_training/.gitkeep
+!data/chroma_db/.gitkeep
+
+# 模型文件 (太大, Streamlit Cloud上会重新下载)
+saved_models/*
+materials_ai/saved_models/*
+!saved_models/.gitkeep
+
+# 环境变量
+.env
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# Claude
+.claude/
+
+# 临时文件
+*.tmp
+*.log
+/tmp/

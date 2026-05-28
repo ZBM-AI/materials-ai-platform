@@ -1,0 +1,120 @@
+[
+  {
+    "paper_id": "perovskite_solar_cell",
+    "filename": "perovskite_solar_cell.txt",
+    "abstract": "Organic-inorganic hybrid perovskites, particularly methylammonium lead iodide (MAPbI3), have emerged as revolutionary materials for photovoltaic applications. MAPbI3 with a direct band gap of 1.55 eV adopts the tetragonal perovskite crystal structure at room temperature. The material is typically deposited by spin coating or chemical vapor deposition. Power conversion efficiencies exceeding 25% have been demonstrated in perovskite solar cells.",
+    "entities": [
+      {"text": "MAPbI3", "entity_type": "material", "start_char": 0, "end_char": 6, "sentence_idx": 0, "confidence": 1.0},
+      {"text": "perovskite", "entity_type": "crystal_structure", "start_char": 0, "end_char": 10, "sentence_idx": 0, "confidence": 1.0},
+      {"text": "band gap", "entity_type": "property", "start_char": 0, "end_char": 8, "sentence_idx": 1, "confidence": 1.0},
+      {"text": "1.55 eV", "entity_type": "property_value", "start_char": 0, "end_char": 7, "sentence_idx": 1, "confidence": 1.0},
+      {"text": "spin coating", "entity_type": "processing_method", "start_char": 0, "end_char": 12, "sentence_idx": 2, "confidence": 1.0},
+      {"text": "chemical vapor deposition", "entity_type": "processing_method", "start_char": 0, "end_char": 25, "sentence_idx": 2, "confidence": 1.0},
+      {"text": "solar cell", "entity_type": "application", "start_char": 0, "end_char": 9, "sentence_idx": 3, "confidence": 1.0}
+    ],
+    "relations": [
+      {"subject": "MAPbI3", "predicate": "hasStructure", "object": "perovskite", "evidence": "MAPbI3 adopts the tetragonal perovskite crystal structure"},
+      {"subject": "MAPbI3", "predicate": "hasProperty", "object": "band gap", "evidence": "MAPbI3 with a direct band gap of 1.55 eV"},
+      {"subject": "band gap", "predicate": "hasValue", "object": "1.55 eV", "evidence": "band gap of 1.55 eV"},
+      {"subject": "MAPbI3", "predicate": "processedBy", "object": "spin coating", "evidence": "deposited by spin coating"},
+      {"subject": "MAPbI3", "predicate": "processedBy", "object": "chemical vapor deposition", "evidence": "deposited by chemical vapor deposition"},
+      {"subject": "MAPbI3", "predicate": "usedIn", "object": "solar cell", "evidence": "perovskite solar cells"}
+    ],
+    "raw_text": "Organic-inorganic hybrid perovskites, particularly methylammonium lead iodide (MAPbI3), have emerged as revolutionary materials for photovoltaic applications.",
+    "sections": [{"title": "Abstract", "content": "Organic-inorganic hybrid perovskites... perovskite solar cells."}],
+    "word_count": 65
+  },
+  {
+    "paper_id": "battery_cathode",
+    "filename": "battery_cathode.txt",
+    "abstract": "Lithium cobalt oxide (LiCoO2) remains the dominant cathode material in commercial lithium-ion batteries. LiCoO2 exhibits a layered crystal structure (space group R-3m) with a theoretical specific capacity of 274 mAh/g. The material is typically synthesized by co-precipitation followed by high-temperature solid-state reaction. Despite its widespread use, alternatives like NMC and LFP are being developed for improved thermal stability.",
+    "entities": [
+      {"text": "LiCoO2", "entity_type": "material", "start_char": 0, "end_char": 6, "sentence_idx": 0, "confidence": 1.0},
+      {"text": "lithium-ion battery", "entity_type": "application", "start_char": 0, "end_char": 19, "sentence_idx": 0, "confidence": 1.0},
+      {"text": "specific capacity", "entity_type": "property", "start_char": 0, "end_char": 16, "sentence_idx": 1, "confidence": 1.0},
+      {"text": "co-precipitation", "entity_type": "processing_method", "start_char": 0, "end_char": 15, "sentence_idx": 2, "confidence": 1.0},
+      {"text": "NMC", "entity_type": "material", "start_char": 0, "end_char": 3, "sentence_idx": 3, "confidence": 1.0},
+      {"text": "LFP", "entity_type": "material", "start_char": 0, "end_char": 3, "sentence_idx": 3, "confidence": 1.0}
+    ],
+    "relations": [
+      {"subject": "LiCoO2", "predicate": "usedIn", "object": "lithium-ion battery", "evidence": "LiCoO2 remains the dominant cathode material in commercial lithium-ion batteries"},
+      {"subject": "LiCoO2", "predicate": "hasProperty", "object": "specific capacity", "evidence": "LiCoO2 exhibits a theoretical specific capacity of 274 mAh/g"},
+      {"subject": "LiCoO2", "predicate": "processedBy", "object": "co-precipitation", "evidence": "synthesized by co-precipitation"},
+      {"subject": "LiCoO2", "predicate": "relatedTo", "object": "NMC", "evidence": "alternatives like NMC and LFP are being developed"},
+      {"subject": "LiCoO2", "predicate": "relatedTo", "object": "LFP", "evidence": "alternatives like NMC and LFP"}
+    ],
+    "raw_text": "Lithium cobalt oxide (LiCoO2) remains the dominant cathode material in commercial lithium-ion batteries.",
+    "sections": [{"title": "Abstract", "content": "Lithium cobalt oxide... improved thermal stability."}],
+    "word_count": 60
+  },
+  {
+    "paper_id": "thermoelectric",
+    "filename": "thermoelectric.txt",
+    "abstract": "Bismuth telluride (Bi2Te3) is the state-of-the-art thermoelectric material for near-room-temperature applications. Bi2Te3 exhibits a high Seebeck coefficient combined with low lattice thermal conductivity, resulting in a thermoelectric figure of merit ZT ≈ 1.0. Spark plasma sintering (SPS) has been demonstrated as an effective method for consolidating Bi2Te3-based thermoelectric materials. The material is primarily used in thermoelectric generators for waste heat recovery.",
+    "entities": [
+      {"text": "Bi2Te3", "entity_type": "material", "start_char": 0, "end_char": 6, "sentence_idx": 0, "confidence": 1.0},
+      {"text": "Seebeck coefficient", "entity_type": "property", "start_char": 0, "end_char": 18, "sentence_idx": 1, "confidence": 1.0},
+      {"text": "thermal conductivity", "entity_type": "property", "start_char": 0, "end_char": 20, "sentence_idx": 1, "confidence": 1.0},
+      {"text": "spark plasma sintering", "entity_type": "processing_method", "start_char": 0, "end_char": 21, "sentence_idx": 2, "confidence": 1.0},
+      {"text": "thermoelectric generator", "entity_type": "application", "start_char": 0, "end_char": 23, "sentence_idx": 3, "confidence": 1.0}
+    ],
+    "relations": [
+      {"subject": "Bi2Te3", "predicate": "hasProperty", "object": "Seebeck coefficient", "evidence": "Bi2Te3 exhibits a high Seebeck coefficient"},
+      {"subject": "Bi2Te3", "predicate": "hasProperty", "object": "thermal conductivity", "evidence": "low lattice thermal conductivity"},
+      {"subject": "Bi2Te3", "predicate": "processedBy", "object": "spark plasma sintering", "evidence": "Spark plasma sintering (SPS) has been demonstrated as an effective method for consolidating Bi2Te3"},
+      {"subject": "Bi2Te3", "predicate": "usedIn", "object": "thermoelectric generator", "evidence": "used in thermoelectric generators"}
+    ],
+    "raw_text": "Bismuth telluride (Bi2Te3) is the state-of-the-art thermoelectric material for near-room-temperature applications.",
+    "sections": [{"title": "Abstract", "content": "Bismuth telluride... waste heat recovery."}],
+    "word_count": 55
+  },
+  {
+    "paper_id": "photocatalyst",
+    "filename": "photocatalyst.txt",
+    "abstract": "Titanium dioxide (TiO2) is the most widely studied photocatalyst due to its chemical stability, low cost, and excellent photocatalytic activity. TiO2 in the anatase phase has a band gap of approximately 3.2 eV, limiting its photoactivity to the UV region. Various strategies including doping and heterojunction formation have been explored to extend its absorption into the visible range. TiO2 photocatalysts are commonly synthesized by sol-gel or hydrothermal methods and are used for water splitting and environmental remediation.",
+    "entities": [
+      {"text": "TiO2", "entity_type": "material", "start_char": 0, "end_char": 4, "sentence_idx": 0, "confidence": 1.0},
+      {"text": "photocatalyst", "entity_type": "application", "start_char": 0, "end_char": 13, "sentence_idx": 0, "confidence": 1.0},
+      {"text": "anatase", "entity_type": "crystal_structure", "start_char": 0, "end_char": 7, "sentence_idx": 1, "confidence": 1.0},
+      {"text": "band gap", "entity_type": "property", "start_char": 0, "end_char": 8, "sentence_idx": 1, "confidence": 1.0},
+      {"text": "3.2 eV", "entity_type": "property_value", "start_char": 0, "end_char": 5, "sentence_idx": 1, "confidence": 1.0},
+      {"text": "sol-gel", "entity_type": "processing_method", "start_char": 0, "end_char": 7, "sentence_idx": 3, "confidence": 1.0},
+      {"text": "hydrothermal", "entity_type": "processing_method", "start_char": 0, "end_char": 12, "sentence_idx": 3, "confidence": 1.0},
+      {"text": "water splitting", "entity_type": "application", "start_char": 0, "end_char": 14, "sentence_idx": 3, "confidence": 1.0}
+    ],
+    "relations": [
+      {"subject": "TiO2", "predicate": "hasStructure", "object": "anatase", "evidence": "TiO2 in the anatase phase"},
+      {"subject": "TiO2", "predicate": "hasProperty", "object": "band gap", "evidence": "TiO2 has a band gap of approximately 3.2 eV"},
+      {"subject": "band gap", "predicate": "hasValue", "object": "3.2 eV", "evidence": "band gap of approximately 3.2 eV"},
+      {"subject": "TiO2", "predicate": "processedBy", "object": "sol-gel", "evidence": "synthesized by sol-gel"},
+      {"subject": "TiO2", "predicate": "processedBy", "object": "hydrothermal", "evidence": "or hydrothermal methods"},
+      {"subject": "TiO2", "predicate": "usedIn", "object": "water splitting", "evidence": "used for water splitting"},
+      {"subject": "TiO2", "predicate": "usedIn", "object": "photocatalyst", "evidence": "TiO2 is the most widely studied photocatalyst"}
+    ],
+    "raw_text": "Titanium dioxide (TiO2) is the most widely studied photocatalyst due to its chemical stability, low cost, and excellent photocatalytic activity.",
+    "sections": [{"title": "Abstract", "content": "Titanium dioxide... environmental remediation."}],
+    "word_count": 70
+  },
+  {
+    "paper_id": "high_entropy_alloy",
+    "filename": "high_entropy_alloy.txt",
+    "abstract": "The equiatomic FeCoNiCrMn high-entropy alloy (HEA), also known as the Cantor alloy, exhibits a single-phase face-centered cubic (FCC) solid solution structure. The alloy demonstrates an excellent combination of yield strength and ductility, particularly at cryogenic temperatures. Arc melting is the most common fabrication method for HEAs. FeCoNiCrMn shows great potential as a structural material in cryogenic and high-temperature applications due to its remarkable phase stability.",
+    "entities": [
+      {"text": "FeCoNiCrMn", "entity_type": "material", "start_char": 0, "end_char": 10, "sentence_idx": 0, "confidence": 1.0},
+      {"text": "high-entropy alloy", "entity_type": "material", "start_char": 0, "end_char": 16, "sentence_idx": 0, "confidence": 1.0},
+      {"text": "face-centered cubic", "entity_type": "crystal_structure", "start_char": 0, "end_char": 18, "sentence_idx": 0, "confidence": 1.0},
+      {"text": "yield strength", "entity_type": "property", "start_char": 0, "end_char": 13, "sentence_idx": 1, "confidence": 1.0},
+      {"text": "arc melting", "entity_type": "processing_method", "start_char": 0, "end_char": 11, "sentence_idx": 2, "confidence": 1.0},
+      {"text": "structural material", "entity_type": "application", "start_char": 0, "end_char": 18, "sentence_idx": 3, "confidence": 1.0}
+    ],
+    "relations": [
+      {"subject": "FeCoNiCrMn", "predicate": "hasStructure", "object": "face-centered cubic", "evidence": "exhibits a single-phase face-centered cubic solid solution"},
+      {"subject": "FeCoNiCrMn", "predicate": "hasProperty", "object": "yield strength", "evidence": "excellent combination of yield strength and ductility"},
+      {"subject": "FeCoNiCrMn", "predicate": "processedBy", "object": "arc melting", "evidence": "Arc melting is the most common fabrication method"},
+      {"subject": "FeCoNiCrMn", "predicate": "usedIn", "object": "structural material", "evidence": "potential as a structural material"}
+    ],
+    "raw_text": "The equiatomic FeCoNiCrMn high-entropy alloy (HEA), also known as the Cantor alloy, exhibits a single-phase face-centered cubic solid solution structure.",
+    "sections": [{"title": "Abstract", "content": "The equiatomic FeCoNiCrMn... remarkable phase stability."}],
+    "word_count": 55
+  }
+]

@@ -1,0 +1,137 @@
+version: "3.9"
+
+services:
+  # ============== 基础设施 ==============
+  mongo:
+    image: mongo:7
+    container_name: mat-ai-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    environment:
+      MONGO_INITDB_DATABASE: materials_ai
+
+  redis:
+    image: redis:7-alpine
+    container_name: mat-ai-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+
+  # ============== AI 微服务 ==============
+  embedding-api:
+    build:
+      context: .
+      dockerfile: services/embedding-api/Dockerfile
+    container_name: mat-ai-embedding
+    restart: unless-stopped
+    ports:
+      - "8007:8007"
+
+  scibert-ner:
+    build:
+      context: .
+      dockerfile: services/scibert-ner/Dockerfile
+    container_name: mat-ai-scibert
+    restart: unless-stopped
+    ports:
+      - "8001:8001"
+    depends_on:
+      - embedding-api
+
+  rag-api:
+    build:
+      context: .
+      dockerfile: services/rag-api/Dockerfile
+    container_name: mat-ai-rag
+    restart: unless-stopped
+    ports:
+      - "8002:8002"
+    depends_on:
+      - embedding-api
+
+  cgcnn-proxy:
+    build:
+      context: .
+      dockerfile: services/cgcnn-proxy/Dockerfile
+    container_name: mat-ai-cgcnn
+    restart: unless-stopped
+    ports:
+      - "8003:8003"
+
+  yolo-grain:
+    build:
+      context: .
+      dockerfile: services/yolo-grain/Dockerfile
+    container_name: mat-ai-yolo
+    restart: unless-stopped
+    ports:
+      - "8004:8004"
+
+  unet-phase:
+    build:
+      context: .
+      dockerfile: services/unet-phase/Dockerfile
+    container_name: mat-ai-unet
+    restart: unless-stopped
+    ports:
+      - "8005:8005"
+
+  crystal-diffusion:
+    build:
+      context: .
+      dockerfile: services/crystal-diffusion/Dockerfile
+    container_name: mat-ai-crystal
+    restart: unless-stopped
+    ports:
+      - "8006:8006"
+
+  # ============== FastAPI 后端 ==============
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: mat-ai-backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017
+      - REDIS_URL=redis://redis:6379/0
+      - SCIBERT_NER_URL=http://scibert-ner:8001/predict
+      - RAG_API_URL=http://rag-api:8002
+      - CGCNN_PROXY_URL=http://cgcnn-proxy:8003/predict
+      - YOLO_GRAIN_URL=http://yolo-grain:8004/predict
+      - UNET_PHASE_URL=http://unet-phase:8005/predict
+      - CRYSTAL_DIFFUSION_URL=http://crystal-diffusion:8006/generate
+      - EMBEDDING_API_URL=http://embedding-api:8007
+    env_file:
+      - .env
+    depends_on:
+      - mongo
+      - redis
+      - scibert-ner
+      - rag-api
+      - cgcnn-proxy
+      - yolo-grain
+      - unet-phase
+      - crystal-diffusion
+
+  # ============== Streamlit 前端 ==============
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    container_name: mat-ai-frontend
+    restart: unless-stopped
+    ports:
+      - "8501:8501"
+    environment:
+      - BACKEND_URL=http://backend:8000
+    depends_on:
+      - backend
+
+volumes:
+  mongo_data:

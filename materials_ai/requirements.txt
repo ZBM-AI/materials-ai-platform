@@ -1,0 +1,63 @@
+numpy>=2.0
+pandas>=3.0
+scikit-learn>=1.5
+scipy>=1.10
+pymatgen>=2024
+spacy>=3.8
+pdfplumber>=0.11
+networkx>=3.3
+pyvis>=0.3
+streamlit>=1.40
+plotly>=5.18
+joblib>=1.4
+tqdm>=4.66
+
+# Module 1 Upgrade: PDF & OCR
+PyMuPDF>=1.24.0
+pytesseract>=0.3.10
+pdf2image>=1.17.0
+Pillow>=10.0.0
+
+# Module 1 Upgrade: SciBERT NER (Deep Learning)
+torch>=2.0.0
+transformers>=4.40.0
+datasets>=2.19.0
+seqeval>=1.2.2
+accelerate>=0.30.0
+
+# Module 1 Upgrade: RAG & Vector Database
+langchain>=0.2.0
+langchain-community>=0.2.0
+langchain-openai>=0.1.0
+chromadb>=0.5.0
+sentence-transformers>=3.0.0
+openai>=1.30.0
+
+# Module 1 Upgrade: Database (optional)
+pymongo>=4.7.0
+
+# Module 1 Upgrade: HTTP requests
+requests>=2.31.0
+
+# Module 2 Upgrade: Knowledge Graph (Neo4j + RGCN)
+py2neo>=2021.2.3
+# PyTorch Geometric (optional — for RGCN link prediction)
+# Install manually: pip install torch-geometric
+# torch-geometric>=2.5.0
+# torch-scatter>=2.1.0
+# torch-sparse>=0.6.0
+
+# Module 4: Microscopy Image Analysis
+opencv-python>=4.9.0
+torchvision>=0.17.0
+ultralytics>=8.1.0
+
+# Module 5: Crystal Structure Generation (Diffusion + PyXtal)
+pyxtal>=0.6.0
+# torch-geometric is a prerequisite for CGCNN proxy and EGNN
+# Install torch-geometric manually: pip install torch-geometric
+# torch-geometric>=2.5.0
+
+# Module 6: Learning Assistant (FAISS + sentence-transformers)
+faiss-cpu>=1.8.0
+# For GPU FAISS: pip install faiss-gpu
