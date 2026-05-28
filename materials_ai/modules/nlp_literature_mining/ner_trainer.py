@@ -16,6 +16,13 @@ try:
     HAS_TRANSFORMERS = True
 except ImportError:
     HAS_TRANSFORMERS = False
+    # 提供占位基类, 避免类定义时NameError
+    Dataset = object
+    AutoTokenizer = object
+    AutoModelForTokenClassification = object
+    TrainingArguments = object
+    Trainer = object
+    DataCollatorForTokenClassification = object
 
 from .bio_schema import align_labels_with_wordpieces
 
