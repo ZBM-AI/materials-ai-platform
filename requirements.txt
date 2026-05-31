@@ -24,12 +24,3 @@ opencv-python-headless>=4.8
 joblib
 xgboost
 shap
-langchain>=0.2
-langchain-community>=0.2
-chromadb>=0.5
-sentence-transformers>=2.7
-torch>=2.0
-transformers>=4.40
-seqeval
-uvicorn
-fastapi
